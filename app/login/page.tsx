@@ -17,7 +17,7 @@ export default function LoginPage() {
     const { error } = await supabaseBrowser.auth.signInWithPassword({ email, password });
     if (error) return setStatus(`Error: ${error.message}`);
     setStatus("Signed in. Redirecting...");
-    router.push("/extract");
+    router.push("/properties");
   }
 
   async function signUp() {
